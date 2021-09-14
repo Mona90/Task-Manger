@@ -1,0 +1,23 @@
+.app {
+  background: #eff2f1;
+}
+.app .box {
+  border: 1px solid #eee9e9;
+  box-shadow: 1px 1px 13px 3px #ccc;
+  border-radius: 20px;
+  padding: 20px;
+  background: #091244;
+}
+.app .box h2 {
+  color: #fff;
+}
+
+.list-group-item:nth-child(odd) {
+  background: #d01474;
+  color: #fff;
+}
+
+.list-group-item:nth-child(even) {
+  background: #14b954;
+  color: #fff;
+}
