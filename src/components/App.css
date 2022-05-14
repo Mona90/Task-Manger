@@ -12,7 +12,7 @@
   color: #fff;
 }
 
-.list-group-item:nth-child(odd) {
+/* .list-group-item:nth-child(odd) {
   background: #d01474;
   color: #fff;
 }
@@ -20,4 +20,4 @@
 .list-group-item:nth-child(even) {
   background: #14b954;
   color: #fff;
-}
+} */
