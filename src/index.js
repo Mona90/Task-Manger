@@ -6,7 +6,6 @@ import {createStore} from "redux";
 import reminders from './store/reducers'
 import { Provider } from 'react-redux';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-// import reducer from './reducers/rootReducer';
 
 const store = createStore(reminders)
 

@@ -7,7 +7,6 @@ import "react-datepicker/dist/react-datepicker.css";
 import './App.css'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faPenToSquare} from '@fortawesome/free-regular-svg-icons'
-// import 'reactjs-popup/dist/index.css';
 import PopupComponent from './Popup';
 import { Lists } from './style';
 
@@ -15,7 +14,6 @@ export const App=(props)=>{
     
      const [text, setText]= useState("")
      const [date, setDate]= useState(new Date())
-    //  const [open, setOpen] = useState(true);
      const [popupItem, setPopupItem] = useState(null)
    
     const renderReminders = () => {
@@ -105,7 +103,6 @@ export const App=(props)=>{
                                 <button className="btn btn-info bg-gradient ms-auto d-block my-3"
                                 onClick={()=> {
                                     props.add_Reminder(text, date, "in progress")
-                                    // this.setState({text:"",date:""})
                                     setText("")
                                     setDate("")
                                 }}>Add Reminder</button>
@@ -124,17 +121,7 @@ export const App=(props)=>{
         )
 
 }
-//  function mapDispatchToProps(dispatch){
-//      return(
-//          add_Reminder = ()=> dispatch(add_Reminder())
-//      )
-//  }
-// function mapStateToProps(state){
-//     return{
-//         reminders: state
 
-//     }
-// }
 
 export default connect(state=>{
     return{

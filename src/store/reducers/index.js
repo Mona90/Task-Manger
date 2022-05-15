@@ -2,7 +2,6 @@ import { ADD_REMINDER, CLEAR_REMINDERS, EDIT_REMINDER, REMOVE_REMINDER } from ".
 import { bake_cookie, read_cookie } from 'sfcookies'
 
 const reminders = (state=[], action) => {
-    // bake_cookie('reminders')
 
     let reminders = state;
     state = read_cookie('reminders');
@@ -26,7 +25,6 @@ const reminders = (state=[], action) => {
         }
         bake_cookie('reminders', reminders)
 
-        // const targetElement = action
         console.log('from edit reducer', reminders)
         return reminders
 
