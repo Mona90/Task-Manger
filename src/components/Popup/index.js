@@ -12,8 +12,18 @@ function PopupComponent(props) {
 
   const [value, setValue] = useState(props.popupItem)
     console.log('from popup', value.status)
+    
+    const handleEdit = async(value)=>{
+
+        await props.edit_Reminder(value)
+          props.closeModal()
+        
+ 
+      
+    }
+
   return (
-            <Popup open={true} closeOnDocumentClick onClose={props.closeModal}>
+            <Popup open={true} closeOnDocumentClick onClose={props.closeModal} style={{transition:'all 0.4s ease-in-out'}}>
               <Modal className="modal" style={{background:'#000'}}>
                 <Link className="close" to="/" onClick={props.closeModal}>
                   &times;
@@ -33,7 +43,7 @@ function PopupComponent(props) {
                     Done
                   </label>
                 </div>
-                <button className='btn btn-warning d-block ml-auto' onClick={()=>props.edit_Reminder(value)}>Edit</button>
+                <button className='btn btn-warning d-block ml-auto' onClick={()=>handleEdit(value)}>Edit</button>
                 </div>
               </Modal>
             </Popup>
